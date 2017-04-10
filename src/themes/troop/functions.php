@@ -9,7 +9,11 @@ function my_rest_prepare_post( $data, $post, $request ) {
 	$_data = $data->data;
 	$thumbnail_id = get_post_thumbnail_id( $post->ID );
 	$thumbnail = wp_get_attachment_image_src( $thumbnail_id );
+    $comments = get_comments(array(
+        'post_id' => $post->ID
+    ));
 	$_data['featured_image_url'] = $thumbnail[0];
+    $_data['comments'] = $comments;
 
     //Hide attrs
 	unset($_data['featured_media']);
@@ -23,8 +27,8 @@ function my_rest_prepare_post( $data, $post, $request ) {
 	unset($_data['acf']);
 
 	$data->data = $_data;
+    unset($data->_links);
 	return $data;
 }
-
 add_filter( 'rest_prepare_post', 'my_rest_prepare_post', 10, 3 );
-include "customEndpoints/CommentsController.php";
+add_filter( 'rest_allow_anonymous_comments', '__return_true' );
