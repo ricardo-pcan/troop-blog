@@ -1,0 +1,42 @@
+{
+    "version": "4.7.3",
+    "locale": "es_ES",
+    "theme": "troop",
+    "plugins": [
+        {
+            "name": "rest-api",
+            "active": true,
+            "version": "2.0-beta15"
+        },
+        {
+            "name": "advanced-custom-fields",
+            "active": true,
+            "version": "4.4.11"
+        },
+        {
+            "name": "advanced-custom-field-repeater-collapser",
+            "active": true,
+            "version": "1.4.3"
+        },
+        {
+           "name": "acf-to-rest-api",
+           "active": true,
+           "version": "2.2.1"
+       }
+    ],
+    "custom_plugins" : [
+    ],
+    "wordpress-workflow" : [
+        {
+            "dependencies-mannager": {
+            "software": "",
+            "version" : ""
+            },
+            "style-preprocessor": {
+
+            }
+        }
+    ] 
+
+}
+
