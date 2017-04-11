@@ -8,7 +8,7 @@ add_action( 'after_setup_theme', 'add_theme_supports' );
 function my_rest_prepare_post( $data, $post, $request ) {
 	$_data = $data->data;
 	$thumbnail_id = get_post_thumbnail_id( $post->ID );
-	$thumbnail = wp_get_attachment_image_src( $thumbnail_id );
+	$thumbnail = wp_get_attachment_image_src( $thumbnail_id, 'full' );
     $comments = get_comments(array(
         'post_id' => $post->ID
     ));
