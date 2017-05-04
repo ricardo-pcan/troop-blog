@@ -38,5 +38,25 @@
         "dbpassword": "SW8fEsabUseruFru",
         "dbhost": "localhost",
         "dbprefix": "wp_"
+    },
+    "production": {
+        "url": "blog.troop.mx",
+        "user": "blog",
+        "group": "blog",
+        "hosts": ["blog.troop.mx"],
+        "public_dir": "/var/www/vhosts/blog.troop.mx/public/",
+        "wpworkflow_dir": "/var/www/vhosts/blog.troop.mx/wpworkflow/",
+        "command_prefixes": [
+            "/var/www/vhosts/blog.troop.mx/env/wp-cli/bin/activate"
+        ],
+        "title": "Troop Blog",
+        "admin_user": "admin",
+        "admin_password": "3xvsR2J2VrpGmzav",
+        "admin_email": "desarrollo@vincoorbis.com",
+        "dbname": "blog",
+        "dbuser": "blog",
+        "dbpassword": "2PVf9cfM5pnyYH",
+        "dbhost": "troop-wordpress.cqeinnktcvks.us-west-2.rds.amazonaws.com",
+        "dbprefix": "wp_"
     }
 }
